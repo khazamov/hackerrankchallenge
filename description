@@ -1,0 +1,68 @@
+Duplicate data is a fact of life. It just happens. However, for a doctor that is treating a patient with multiple records it can be a very dangerous problem. Every time a patient is registered in a system their name and social security number (SSN) is captured. In this problem, there are now over 100K patient records. One of the main problems we are facing is duplication of these patient records and we need your help.
+
+
+Given a list of N patient records, you have to determine the unique records by eliminating the duplicates.
+
+Input format:
+
+The first line contains an integer *N*, N lines follow each line having:
+    NAME:SSN
+
+A NAME can be in any of the following forms:
+1.<First Name>
+2. <Last Name>, <First Name>
+3. <first Name> <Last Name>
+4. <Last Name>,<First Name> <Last Name>
+5. <First Name> <Middle Name> <Last Name>
+6. <First Initial>. <Middle Initial>. <Last Name>
+7. <First Name> <Middle Initial>. <Last Name>
+ So if a person's name is Maggie Fitzgerald Fergusson with an SSN 012345678, then she can have any of the following names for the same SSN 012345678:
+
+ Maggie
+ Fergusson, Maggie
+ Maggie Ferguson
+ Ferguson, Maggie Fitzgerald
+ Maggie Fitzgerald Fergusson
+ M.F Fergusson
+ Maggie F. Fergusson
+
+ Constraints:
+
+ Names will be in the format mentioned above.
+ SSN will be of the format:
+ DDDDDDDD
+ 3<=N<=3*10^5
+ 0<=D<=9
+
+ Output format:
+
+ Eliminate all duplicate records and print unique names in the order it is read. If an SSN has mutliple entried, print the name that has the highest order and in the correct format.
+
+ Sample Input:
+ Mervin:865965036
+ Bouck, Mervin:865965036
+ Bouck, Mervine Adeline:865965036
+ Mervin Adeline Bouck:865965036
+
+ Sample Output:
+ Mervin ADELINE BOUCK:865965036
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
